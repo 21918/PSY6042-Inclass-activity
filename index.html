@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>PSY6042 Week 4 Activity</title>
+<script>
+  var surveys = [
+    "https://app.onlinesurveys.jisc.ac.uk/s/stmarys/psy6042-week-4-in-class-activity-a",
+    "https://app.onlinesurveys.jisc.ac.uk/s/stmarys/psy6042-week-4-in-class-activity-b"
+  ];
+  // Each visitor has an independent 50% chance of A or B
+  var r = new Uint32Array(1);
+  (window.crypto || window.msCrypto).getRandomValues(r);
+  location.replace(surveys[r[0] % 2]);
+</script>
+<style>
+  body { font-family: system-ui, sans-serif; background: #fff; color: #222; padding: 16px; text-align: center; }
+</style>
+</head>
+<body>
+<p>Taking you to the activity…</p>
+<noscript>
+  <p>JavaScript is off. Please use one of these links:
+  <a href="https://app.onlinesurveys.jisc.ac.uk/s/stmarys/psy6042-week-4-in-class-activity-a">Activity A</a> or
+  <a href="https://app.onlinesurveys.jisc.ac.uk/s/stmarys/psy6042-week-4-in-class-activity-b">Activity B</a></p>
+</noscript>
+</body>
+</html>
